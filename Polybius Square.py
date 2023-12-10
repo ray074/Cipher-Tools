@@ -93,7 +93,7 @@ def main():
     print("\n", "Plaintext: ", "\n")
     print(calcMostProbable(convertedList))
     
-    check = input("\n Check? ").lower()
+    check = input("\n Display results for all Polybius Squares? (y/n) ").lower()
     if check == "y" or check == "yes":
         for value in convertedList:
             print("\n", value, "\n", "\n")
