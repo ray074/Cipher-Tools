@@ -96,7 +96,7 @@ def main():
     check = input("\n Display results for all Polybius Squares? (y/n) ").lower()
     if check == "y" or check == "yes":
         for value in convertedList:
-            print("\n", value, "\n", "\n")
+            print("\n", value, "\n\n")
 
 
 if __name__ == "__main__":
