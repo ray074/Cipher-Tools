@@ -90,7 +90,7 @@ def calcMostProbable(converted):
 def main():
     nums = list("".join(x for x in input("Enter Polybius Square Numbers: ").split()))
     convertedList = polybiusConverter(nums)
-    print("\n", "Plaintext: ", "\n")
+    print("\n", "Plaintext: \n")
     print(calcMostProbable(convertedList))
     
     check = input("\n Display results for all Polybius Squares? (y/n) ").lower()
