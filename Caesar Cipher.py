@@ -20,6 +20,7 @@ def caesarSolver(cipherText, shift):
 
     return "".join(cipherCopy)
 
+
 def diffs(cipher):
     
     distributions = [
@@ -41,6 +42,7 @@ def diffs(cipher):
         
     return diff
  
+
 def main():
     final, absDiffs = [], []
     cipherText = input("Enter text encrypted with a Caesar Cypher: \n\n")
@@ -61,5 +63,7 @@ def main():
         for cipher in final:
             print()
             print(cipher)
-    
-main()
+
+
+if __name__ == "__main__":
+    main()
