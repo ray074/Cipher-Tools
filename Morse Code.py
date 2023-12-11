@@ -26,11 +26,15 @@ def morseConverter(cipherText):
     
     plaintext = "".join(final)
     return plaintext
-    
+
+
 def main():
     cipherText = input("Enter Morse Code: ")
     plaintext = morseConverter(cipherText)
     print("\n", "Plaintext: ", "\n")
     print(plaintext)
     
-main()
+
+if __name__ == "__main__":
+    main()
+    
