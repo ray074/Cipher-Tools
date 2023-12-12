@@ -59,10 +59,10 @@ def main():
     check = input("Check other Shifts? (y/n) ").lower()
     if check == "n" or check == "no":
         return
-    else:
-        for cipher in final:
-            print()
-            print(cipher)
+    
+    for cipher in final:
+        print()
+        print(cipher)
 
 
 if __name__ == "__main__":
