@@ -1,4 +1,5 @@
-%matplotlib qt
+# %matplotlib qt
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -8,14 +9,13 @@ def plotFrequencies(extractFrequencies):
     letters = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
     xIndexes = np.arange(len(letters))
 
-    titleFont = {"fontname":"Microsoft Sans Serif"}
-    labelFont = {"fontname":"Microsoft Sans Serif"}
-    
     standardFrequencies = [
         8.55, 1.60, 3.16, 3.87, 12.10, 2.18, 2.09, 4.96, 7.33, 0.22, 0.81, 4.21, 2.53,
         7.17, 7.47, 2.07, 0.10, 6.33, 6.73, 8.94, 2.68, 1.06, 1.83, 0.19, 1.72, 0.11
     ]
 
+    titleFont = {"fontname":"Century"}
+    labelFont = {"fontname":"Century"}
     plt.style.use("Solarize_Light2")
     plt.bar(xIndexes - barWidth / 2, extractFrequencies, width=barWidth, color="#D98A31", label="Extract")
     plt.bar(xIndexes + barWidth / 2, standardFrequencies, width=barWidth, color="#3E6DC1", label="Standard")
