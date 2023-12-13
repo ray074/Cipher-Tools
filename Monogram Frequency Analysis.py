@@ -22,8 +22,8 @@ def plotFrequencies(extractFrequencies):
     plt.title("Monogram Frequency Analysis", **titleFont)
     plt.xlabel("Letter", **labelFont)
     plt.ylabel("Frequency (%)", **labelFont)
-    plt.legend()
     plt.xticks(ticks=xIndexes, labels=letters)
+    plt.legend()
     plt.show()
 
     
