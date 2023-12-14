@@ -34,30 +34,3 @@ def calculateMostProbable(cipherText):
             for expected, real in zip(letterDistributions, counts.values()):
                 absDiffs += abs(expected - real)
                 
-            final.append(absDiffs)
-            
-    minIndex = final.index(min(final))
-    aValue = coprimes[minIndex // 26]
-    bValue = minIndex % 26
-    
-    return (affineConverter(cipherText, aValue, bValue), aValue, bValue)
-            
-
-def main():
-    cipherText = input("Enter text encrypted with an Affine Cipher: ").upper()
-    plainText, a, b, = calculateMostProbable(cipherText)
-    print(f"\n Plaintext: \n\n {plainText} \n\n A VALUE: {a} \n B VALUE: {b} \n\n")
-    
-    searching = True
-    while searching:
-        validation = input("Continue with Affine Decryption? (y/n) ").lower()
-        if validation == "y" or validation == "yes":
-            newA = int(input("Enter New A Value: "))
-            newB = int(input("Enter New B Value: "))
-            newPlaintext = affineConverter(cipherText, newA, newB)
-            print(f"\nNew Plaintext: {newPlaintext} \n\n")
-        else:
-            searching = False
-
-if __name__ == "__main__":
-    main()
