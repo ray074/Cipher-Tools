@@ -50,14 +50,4 @@ def main():
     
     searching = True
     while searching:
-        validation = input("Continue with Affine Decryption? (y/n) ").lower()
-        if validation == "y" or validation == "yes":
-            newA = int(input("Enter New A Value: "))
-            newB = int(input("Enter New B Value: "))
-            newPlaintext = affineConverter(cipherText, newA, newB)
-            print(f"\nNew Plaintext: {newPlaintext} \n\n")
-        else:
-            searching = False
-
-if __name__ == "__main__":
-    main()
+        v
