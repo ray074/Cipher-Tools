@@ -1,4 +1,4 @@
-#%matplotlib qt
+%matplotlib qt #Jupyter command to open graph in a new window
 
 import matplotlib.pyplot as plt
 import numpy as np
