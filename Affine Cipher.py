@@ -1,4 +1,8 @@
-from sympy import mod_inverse
+def modInverse(num):
+    for i in range(1, 26):
+        if (num * i) % 26 == 1:
+            return i
+
 
 def affineConverter(cipherText, a, b):
     alpha, final = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ"), []
@@ -6,7 +10,7 @@ def affineConverter(cipherText, a, b):
     for letter in list(cipherText):
         if letter in alpha:
             letterVal = alpha.index(letter)
-            result = (mod_inverse(a, 26) * (letterVal - b)) % 26
+            result = (modInverse(a) * (letterVal - b)) % 26
             final.append(alpha[result])
         else:
             final.append(letter)
@@ -14,6 +18,7 @@ def affineConverter(cipherText, a, b):
     plainText = "".join(final)
     return plainText
             
+
 def calculateMostProbable(cipherText):
     alpha, final = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ"), []
     coprimes = [1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25]
@@ -35,7 +40,7 @@ def calculateMostProbable(cipherText):
             for expected, real in zip(letterDistributions, counts.values()):
                 absDiffs += abs(expected - real)
                 
-            final.append(absDiffs)
+            final.append(round(absDiffs, 4))
             
     minIndex = final.index(min(final))
     aValue = coprimes[minIndex // 26]
@@ -59,6 +64,7 @@ def main():
             print(f"\nNew Plaintext: {newPlaintext} \n\n")
         else:
             searching = False
+
 
 if __name__ == "__main__":
     main()
