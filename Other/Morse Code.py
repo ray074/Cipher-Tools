@@ -1,5 +1,5 @@
 def morseConverter(cipherText):
-    cipherText += " "
+    cipherText -= " "
     symbols = {".", "-"}
     morseDict = {
         '.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E', '..-.': 'F', '--.': 'G',
