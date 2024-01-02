@@ -12,7 +12,6 @@ def caesarConverter(cipherText, shift):
             
     plainText = "".join(final)
     return plainText
-    
 
 
 def calculateMostProbable(cipherText):
@@ -41,6 +40,7 @@ def calculateMostProbable(cipherText):
     bestShift = absDiffs.index(min(absDiffs)) + 1
     return caesarConverter(cipherText, bestShift)
 
+
 def main():
     
     cipherText = input("\nEnter Text Encrypted with a Caesar Cipher: \n\n").upper()
@@ -64,6 +64,7 @@ def main():
             manual = False
         else:
             manual = True
-    
+
+
 if __name__ == "__main__":
     main()
