@@ -1,1 +1,1 @@
-Collection of solvers for simple cipher types.
+A collection of solvers to crack simple to medium difficulty ciphers.
