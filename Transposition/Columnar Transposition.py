@@ -141,6 +141,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-# fix for monogram analysis for this and block
-# fix 9
